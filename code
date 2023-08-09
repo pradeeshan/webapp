@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Web Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Sample Web Application</h1>
+    <p>Click the button to change the text color:</p>
+    <button id="colorButton">Change Color</button>
+
+    <script>
+        // JavaScript code to change text color
+        const button = document.getElementById('colorButton');
+        const text = document.querySelector('p');
+        const colors = ['red', 'blue', 'green', 'purple', 'orange'];
+        let currentColorIndex = 0;
+
+        button.addEventListener('click', () => {
+            text.style.color = colors[currentColorIndex];
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
+        });
+    </script>
+</body>
+</html>
+
